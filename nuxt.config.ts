@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/supabase'],
+  // modules: ['@nuxtjs/supabase'],    // UNCOMMENT THIS LINE TO SEE IT ALL BOMB
   devtools: { enabled: true },
   runtimeConfig: {
     // this one is for postgraphile
