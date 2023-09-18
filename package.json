@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "gcp-build": "gcloud builds submit --region=us-central1 --tag us-central1-docker.pkg.dev/supanuxtphile-399200/supanuxtphile/env-var",
+    "gcp-deploy": "gcloud run deploy env-var --image=us-central1-docker.pkg.dev/supanuxtphile-399200/supanuxtphile/env-var",
+    "gcp-replace": "gcloud run services replace env-var-service-replace.yaml",
+    "gcp-deploy-not": "cd _cloud_run && gcloud run services replace env-var-service.yaml"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.7.3"
+  },
+  "dependencies": {
+    "@nuxtjs/supabase": "^1.1.0"
+  }
+}
